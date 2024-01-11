@@ -6,7 +6,7 @@
     align-items: center;
     flex-direction: column;
     overflow: hidden;
-    padding-block: 3rem;
+    padding-block: 2rem;
     transition: all .75s ease;
 }
 
