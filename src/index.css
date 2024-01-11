@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Teko&display=swap');
+:root{
+    --main-font: 'Poppins', sans-serif;
+    --second-font: 'Teko', sans-serif;;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+input{
+    font-family: var(--main-font);
+}
+

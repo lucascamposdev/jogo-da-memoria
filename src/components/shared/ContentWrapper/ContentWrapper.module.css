@@ -1,0 +1,44 @@
+.container{
+    width: 0;
+    height: 100vh;
+    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    padding-block: 3rem;
+    transition: all .75s ease;
+}
+
+.page{
+    width: 100%;
+    max-width: 1000px;
+    min-width: 1000px;
+    height: 100%;
+}
+
+.open{
+    animation: open .30s ease forwards;
+}
+
+.close{
+    animation: close .30s ease forwards;
+}
+
+@keyframes open{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+
+@keyframes close{
+    from{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+    }
+}

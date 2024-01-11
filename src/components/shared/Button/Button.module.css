@@ -1,0 +1,24 @@
+.button{
+    background: #232323;
+    border: none;
+    padding: 1.5rem;
+    font-size: .9rem;
+    color: white;
+    font-family: var(--main-font);
+    border-radius: 86.7rem;
+    cursor: pointer;
+    animation: fadeIn .75s ease forwards;
+}
+
+.button:hover{
+    background: #5A5A5A;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}

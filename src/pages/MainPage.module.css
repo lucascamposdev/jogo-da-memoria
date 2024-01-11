@@ -1,0 +1,8 @@
+.main{
+    width: 100%;
+    height: 100vh;
+    background: #FE8FFA;
+
+    display: flex;
+    transition: all .75s ease;
+}
