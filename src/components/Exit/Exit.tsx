@@ -14,6 +14,7 @@ import { useContext, useEffect, useState } from 'react';
 
 // Utils
 import cards from '../../data/cards';
+import formatTime from '../../utils/formatTime';
 
 type Props = {
     isActive: boolean;
@@ -22,7 +23,9 @@ type Props = {
 const Exit = ({ isActive}: Props) => {
 
     const [ randomImage, setRandomImage ] = useState<number>(0)
-    const { player, restartGame } = useContext(UserContext)
+    const { player, restartGame, timer } = useContext(UserContext)
+
+
     
       useEffect(() => {
         if(isActive){
@@ -37,13 +40,24 @@ const Exit = ({ isActive}: Props) => {
         <section className={styles.container}>
         <BigText text={`Parabéns ${player.name}, você venceu!`}/>
 
+        <div>
         <figure>
             <img src={`./images/cards/${cards[randomImage].img}`}/>
         </figure>
 
+        <span className={styles.wrapper}>
+            <h3>seu tempo foi</h3>
+            <h1>
+              {formatTime(timer)}
+            </h1>
+            <p>
+              tente novamente para melhorar seu desempenho
+            </p>
+        </span>
+        </div>
+
         <Button onClickFunc={restartGame} text='Jogar Novamente'/>
         </section>
-
     </ContentWrapper>
   )
 }

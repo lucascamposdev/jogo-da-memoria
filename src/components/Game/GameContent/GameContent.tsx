@@ -16,10 +16,11 @@ import cards from '../../../data/cards';
 const GameContent = () => {
 
   const { cardOne, cardTwo, disabled, pickCard} = useGame();
-  const { deck, player, nextPage } = useContext(UserContext);
+  const { deck, player, nextPage, stopTimer } = useContext(UserContext);
 
   useEffect(() =>{
     if(player.points >= cards.length){
+      stopTimer()
       nextPage()
     }
   }, [player])

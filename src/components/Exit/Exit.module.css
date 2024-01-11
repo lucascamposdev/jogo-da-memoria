@@ -32,3 +32,32 @@
 
     }
 }
+
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    border: 1px solid rgba(0, 0, 0, 0.218);
+    padding: 1.5rem 2rem;
+    margin-left: 3rem;
+    font-family: var(--main-font);
+}
+
+.wrapper h1{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+}
+
+.race_flag{
+    height: 2rem;
+    margin-bottom: 1rem;
+}
+
+.wrapper p{
+    margin-top: 1rem;
+    width: 225px;
+}
+
