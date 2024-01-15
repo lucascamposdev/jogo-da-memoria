@@ -17,10 +17,10 @@ import Form from '../../shared/Form/Form'
 const EntranceContent = () => {
 
     const [ inputVal, setInputVal ] = useState<string>('')
-    const { setPlayerName, nextPage } = useContext(UserContext)
+    const { setPlayerName, nextPage, page } = useContext(UserContext)
 
     const submitForm = ( ):void => {
-        if(inputVal.length > 2){
+        if(inputVal.length > 2 && page == 0){
             setPlayerName(formatName(inputVal))
             nextPage()
         }
